@@ -37,3 +37,14 @@ exports.addStore = async (req, res, next) => {
     res.status(500).json({ error: 'Server error' });
   }
 };
+
+
+function auth(req, res, next) {
+  if(req.isAuthenticated()) {
+    Store.findById(req.params.id, (err, camp) => {
+      if(err) res.redirect('/')
+      if(camp.author.id.equals(req.user._id)) return next()
+      else res.redirect('/')
+    })
+  } else res.redirect('/')
+}

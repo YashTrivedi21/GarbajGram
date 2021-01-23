@@ -9,6 +9,13 @@ const StoreSchema = new mongoose.Schema({
     trim: true,
     maxlength: [10, 'Store ID must be less than 10 chars']
   },
+  author: {
+    id: {
+      type : mongoose.Schema.Types.ObjectId,
+      ref : 'User'
+    },
+    username: String
+  },
   address: {
     type: String,
     required: [true, 'Please add an address']
