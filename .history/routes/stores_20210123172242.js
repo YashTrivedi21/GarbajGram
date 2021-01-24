@@ -10,7 +10,7 @@ const router = express.Router();
 router
   .route('/api/v1/stores')
   .get(getStores)
-  .post(addStore);
+  .post(isLoggedIn ,addStore);
 
 function isLoggedIn(req, res, next) {
     if(req.isAuthenticated()) return next()

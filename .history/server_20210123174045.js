@@ -53,7 +53,6 @@ app.use('/', require('./routes/stores'));
 app.use('/', require('./routes/register'));
 app.use('/', require('./routes/login'));
 app.use('/', require('./routes/addnew'));
-app.use('/', require('./routes/leaderboard'));
 
 
 // catch 404 and forward to error handler

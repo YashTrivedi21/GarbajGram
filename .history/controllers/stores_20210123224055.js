@@ -23,11 +23,8 @@ exports.getStores = async (req, res, next) => {
 // @access Public
 exports.addStore = async (req, res, next) => {
   try {
-    // let author = {
-    //     id: req.user._id,
-    //     username: req.user.username
-    // }
     const store = await Store.create(req.body);
+    
     return res.status(201).json({
       success: true,
       data: store

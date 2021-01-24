@@ -12,13 +12,8 @@ router.get('/login', (req,res) => {
 
 router.post('/login',passport.authenticate('local', {
     successRedirect: 'http://localhost:5000/new',
-    failureRedirect: 'http://localhost:5000/new'
+    failureRedirect: '/login'
 }), (req,res) => {
-    // let username = req.body.username
-    // let password = req.body.password
-    // User.create({username: username, password: password}, (err, user) => {
-    //     console.log(user)
-    // })
     req.flash('success', 'logged in!!!')
 
 })

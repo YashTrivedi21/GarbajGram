@@ -5,9 +5,10 @@ const {render} = require("ejs");
 
 const router = express.Router();
 
-router.get('/new', (req,res) => {
+router.get('/new', isLoggedIn, (req,res) => {
     res.render('add')
 })
+
 
 
 function isLoggedIn(req, res, next) {

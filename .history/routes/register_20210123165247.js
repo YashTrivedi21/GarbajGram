@@ -12,7 +12,7 @@ router.post('/register', (req,res) => {
             console.log(err)
             res.redirect('/register')
         } else {
-            passport.authenticate('local')(req, res, () => res.redirect('/'))
+            passport.authenticate('local')(req, res, () => res.redirect('http://localhost:8080/campgrounds'))
         }
     })
 })
