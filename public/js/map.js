@@ -4,7 +4,7 @@ async function getLocation() {
   }
 }
 mapboxgl.accessToken =
-  'pk.eyJ1IjoieWFzaHRyaXZlZGkyMSIsImEiOiJja2p6dTUxemowYjZpMndrMmI5dWY4Z3dzIn0.yyPTkXvXN-bh2f7Jlmc7Iw';
+  'mapbox-access-token-here';
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v11',
