@@ -1,7 +1,4 @@
 const Store = require('../models/Store');
-const passport = require('passport')
-const localStrategy = require('passport-local')
-const passportLocalMongoose = require('passport-local-mongoose')
 
 // @desc  Get all stores
 // @route GET /api/v1/stores
@@ -25,8 +22,8 @@ exports.getStores = async (req, res, next) => {
 // @route POST /api/v1/stores
 // @access Public
 exports.addStore = async (req, res, next) => {
-  console.log(req.user)
   try {
+    console.log(req.user.username, "\n\n")
     // let author = {
     //     id: req.user._id,
     //     username: req.user.username

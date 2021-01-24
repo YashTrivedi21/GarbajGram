@@ -12,9 +12,8 @@ router.get('/leaderboard', function(req, res){
             console.log(`${property}: ${object[property]}`)
         }*/
         for (let item in doc){
-            doc[item].points = Math.floor(Math.random()*1000);
+            doc[item].points = 100;
         }
-        doc.sort((a, b) => (a.points > b.points) ? 1 : -1)
         res.render("leaderboard", {docs: doc})
     }).catch((err) => {
         console.log(err)
