@@ -6,4 +6,4 @@ A web-app to locate nearby garbage cans and add new garbage cans. The app also i
 2. In public/js/map.js, add you mapbox access token in the variable mapboxgl.accessToken
 3. open terminal
 4. run npm start dev
-5. open [http://localhost:5000/](http://localhost:5000/) to see the website function
+5. open [http://localhost:5000/](http://localhost:5000/)(haven't hosted yet) to see the website function
